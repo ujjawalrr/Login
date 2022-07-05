@@ -1,0 +1,58 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-primary px-5 py-2" type="submit">Login</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Need An Account? <a class="ml-2 btn" href="{% url 'dashboard-register' %}">Sign Up Now</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+{% comment %} 
+
+
+
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+   <div class = "register_form">
+    <form method = "POST">
+        {% csrf_token %}
+        <fieldset class = "from-group">
+            <legend class = "from-legend">LogIn</legend>
+            {{ form|crispy }}
+            </fieldset>
+            <div class = "from-submit">
+                <button type =  "submit" class = "register_btn">
+                    LogIn
+                </button>
+                </form>
+                <div class = "register_login">
+                    <small> Need an Account?   </small>
+                    <a href="{% url 'dashboard-register' %}"> SignUp </a>
+
+
+{% endblock content %}
+        
+         {% endcomment %}

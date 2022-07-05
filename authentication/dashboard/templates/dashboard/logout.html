@@ -1,0 +1,12 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+
+                <div class = "logout_view">
+                    <h2>You have been successfully logged out</h2>
+                    <small> Need an Account?   </small>
+                    <a href="{% url 'dashboard-login' %}" class="btn"> Login In Again </a>
+                </div>
+
+
+{% endblock content %}
